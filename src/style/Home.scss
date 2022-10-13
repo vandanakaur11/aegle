@@ -1,0 +1,268 @@
+@import "./Variables.scss";
+.__Home {
+    a {
+        text-decoration: none !important;
+    }
+    height: 100%;
+    min-height: 90vh;
+    padding: 0;
+    padding: 0 $content-outer-gap-desktop !important;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $navbar-background;
+
+    .mainWrapper {
+        height: 70vh;
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        .lower {
+            width: 100%;
+
+            .wrapper {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+
+                .left {
+                    max-width: 40%;
+                    .leftWrapper {
+                        .heading {
+                            font-family: "Rufina", sans-serif !important;
+                            color: $navbar-primary !important;
+                        }
+                        .subheading {
+                            font-family: "Rufina", sans-serif !important;
+                            color: $navbar-accent !important;
+                        }
+                        .button {
+                            margin-top: 3rem;
+                            border: 2px solid $navbar-accent !important;
+                            background-color: $navbar-accent !important;
+                            color: $navbar-primary !important;
+                            transition: 0.5s;
+                            border-radius: 39px;
+                            padding: 0.6rem 2rem;
+                            &:hover,
+                            &:focus {
+                                border: 2px solid $navbar-accent !important;
+                                background-color: transparent !important;
+                                color: $navbar-accent !important;
+                                transition: 0.5s;
+                            }
+                        }
+                        .button.empty {
+                            margin-left: 1rem;
+                            border: 2px solid transparent !important;
+                            background-color: transparent !important;
+                            color: $navbar-primary !important;
+                            &:hover,
+                            &:focus {
+                                border: 2px solid $navbar-accent !important;
+                                color: $navbar-accent !important;
+                            }
+                        }
+                    }
+                }
+
+                .right {
+                    max-width: 50%;
+                    border-radius: 10px;
+                    padding: 0 !important;
+                    margin: 0 !important;
+                    img {
+                        width: 40rem;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        .title {
+            font-size: 1.9rem !important;
+        }
+        .subtitle {
+            font-size: 1.2rem !important;
+        }
+        margin: 0 $content-outer-gap-mobile !important;
+        .mainWrapper {
+            .lower {
+                padding: 2rem;
+                .wrapper > div {
+                    margin: 1rem 0;
+                }
+                .wrapper {
+                    flex-direction: column-reverse;
+                    .leftWrapper {
+                        display: flex !important;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                    }
+                    .heading {
+                        font-size: 1.5rem;
+                    }
+                    .subheading {
+                        font-size: 1rem !important;
+                    }
+                    .right {
+                        width: 5rem;
+                        height: 5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.__What__Home {
+    background-color: $home-background;
+    height: 100%;
+    min-height: 90vh;
+    padding: 0;
+    padding: 0 $content-outer-gap-desktop !important;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .wrapperMain {
+        transform: translateY(-5vh);
+        width: 100% !important;
+        background-color: $navbar-primary;
+        box-shadow: 0px 4px 30px 10px rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+        .subtitle {
+            width: 100%;
+            text-align: center;
+            font-size: 1.5rem !important;
+            padding: 1.5rem 0;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-family: Rufina !important;
+            color: $navbar-background !important;
+            margin: 5rem auto 2rem auto !important;
+            max-width: 35%;
+        }
+        .wrapperDisplay {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            .wrapperDrawer {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                width: 90%;
+                margin: 1rem 0rem;
+                .item {
+                    cursor: pointer;
+                    background: $navbar-primary;
+                    border: 4px solid #e8e8e8;
+                    border-radius: 10px;
+                    width: 30%;
+                    padding: 2rem;
+                    transition: 0.5s;
+                    img {
+                        width: 3rem;
+                        margin-bottom: 2rem;
+                    }
+                    h3 {
+                        font-family: Lato !important;
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 1.5rem;
+                        color: $navbar-background !important;
+                        max-width: 70%;
+                        transition: 0.5s;
+                    }
+                    p {
+                        font-family: Lato !important;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 1rem;
+                        color: $navbar-dark-text !important;
+                        transition: 0.5s;
+                    }
+                    &:hover,
+                    &:focus,
+                    &.active {
+                        background: $navbar-background !important;
+                        box-shadow: 0px 10px 20px 10px rgba(0, 0, 0, 0.15);
+                        transition: 0.5s;
+                        border: 4px solid $navbar-background;
+                        h3 {
+                            color: $navbar-primary !important;
+                            transition: 0.5s;
+                        }
+                        p {
+                            color: $navbar-light-text !important;
+                            transition: 0.5s;
+                        }
+                    }
+                }
+            }
+            hr {
+                width: 70%;
+            }
+            .wrapperContent {
+                width: 70%;
+                margin: 2rem 0rem;
+                .item {
+                    display: none;
+                    &.active {
+                        display: block !important;
+                    }
+                    .chunk {
+                        margin-bottom: 4rem;
+                        h3 {
+                            font-family: Lato !important;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 1.5rem;
+                            color: $navbar-background !important;
+                            max-width: 70%;
+                            transition: 0.5s;
+                            margin-bottom: 1rem;
+                        }
+                        p {
+                            font-family: Lato !important;
+                            font-style: normal;
+                            font-weight: normal;
+                            font-size: 1rem;
+                            color: $navbar-dark-text !important;
+                            transition: 0.5s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media only screen and (max-width: 768px) {
+        .title {
+            font-size: 1.9rem !important;
+        }
+        .subtitle {
+            font-size: 1.2rem !important;
+        }
+        margin: 0 $content-outer-gap-mobile !important;
+        .wrapperDisplay {
+            flex-direction: column;
+            .accordion-item {
+                margin: 1rem !important;
+            }
+        }
+    }
+}

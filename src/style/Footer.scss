@@ -1,0 +1,131 @@
+@import "./Variables.scss";
+.__Footer {
+    padding: 0rem $content-outer-gap-desktop !important;
+    width: 100%;
+    .logo {
+        width: 6rem;
+    }
+    .boxWrapper {
+        padding: 2rem 0rem !important;
+        .box {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            height: 100% !important;
+            .linkHeading {
+                font-weight: bold;
+                color: $navbar-primary;
+            }
+            .linkWrapper {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                li {
+                    margin: 0.1rem 0rem !important;
+                    padding: 0 !important;
+                    text-align: left;
+                    a {
+                        margin: 0 !important;
+                        padding: 0 !important;
+                        text-decoration: none !important;
+                        color: $navbar-light-text;
+                        transition: 0.5s;
+                        &:hover,
+                        &:focus {
+                            color: $navbar-accent;
+                            transition: 0.5s;
+                        }
+                    }
+                }
+            }
+            .textInfo {
+                margin-top: 2rem;
+                width: 50%;
+                text-align: left;
+                .info {
+                }
+                .email {
+                    color: $navbar-primary !important;
+                    font-weight: 600;
+                    letter-spacing: 0.02em;
+                }
+            }
+        }
+    }
+    .footer-copyright {
+        padding: 2rem 0rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        color: $navbar-light-text !important;
+    }
+    position: relative;
+    .backToTop {
+        position: absolute;
+        border: 2px solid $navbar-accent;
+        box-sizing: border-box;
+        border-radius: 35.5px;
+        top: 2rem;
+        right: 2rem;
+        height: 65px !important;
+        width: 65px !important;
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $navbar-accent;
+        cursor: pointer;
+        span {
+        }
+    }
+    @media only screen and (max-width: 768px) {
+        padding: 0 $content-outer-gap-mobile !important;
+    }
+}
+.__Footer.dark {
+    background-color: $navbar-background !important;
+    color: $navbar-light-text !important;
+    .logo {
+        filter: brightness(100);
+    }
+}
+.__Footer.light {
+    background-color: #e8e8e8 !important;
+    color: $navbar-dark-text !important;
+    .boxWrapper {
+        .box {
+            .linkHeading {
+                color: $navbar-dark-text;
+            }
+            .linkWrapper {
+                li {
+                    a {
+                        color: $navbar-dark-text;
+                        &:hover,
+                        &:focus {
+                            color: $navbar-accent;
+                        }
+                    }
+                }
+            }
+            .textInfo {
+                .info {
+                }
+                .email {
+                    color: $navbar-background !important;
+                }
+            }
+        }
+    }
+    .footer-copyright {
+        color: $navbar-dark-text !important;
+    }
+    position: relative;
+    .backToTop {
+        border: 2px solid $navbar-background;
+        color: $navbar-background;
+        span {
+        }
+    }
+}

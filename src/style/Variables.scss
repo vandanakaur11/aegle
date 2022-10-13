@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rufina:wght@400;700&display=swap");
+// Font Lato
+
+$background-home: #f2f2f2;
+$contrast-home: #4572c4;
+
+// Gaps
+$content-outer-gap-desktop: 8rem;
+$content-outer-gap-mobile: 1rem;
+
+// Navbar
+$navbar-background: #0e4656;
+$navbar-primary: #ffffff;
+$navbar-accent: #e7b65f;
+$navbar-dark-text: rgba(0, 0, 0, 0.6);
+$navbar-light-text: rgba(255, 255, 255, 0.8);
+$home-background: #e5e5e5;
+
+* {
+    font-family: "Lato", sans-serif;
+}
+body,
+html {
+    overflow-x: hidden !important;
+}

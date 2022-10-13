@@ -1,0 +1,164 @@
+@import "./Variables.scss";
+.__Navbar.dark {
+    background-color: $navbar-background !important;
+    color: $navbar-primary !important;
+    .logoWrapper {
+        .logo {
+            filter: brightness(100);
+        }
+    }
+    .navbar-links-left {
+        .left {
+            color: $navbar-primary !important;
+        }
+        .left.dropdown {
+            button {
+                color: $navbar-primary !important;
+            }
+        }
+    }
+}
+// Light
+.__Navbar.light {
+    background-color: #f6f6f6 !important;
+    color: $navbar-background !important;
+    .navbar-links-left {
+        .left {
+            color: $navbar-background !important;
+        }
+        .left.dropdown {
+            button {
+                color: $navbar-background !important;
+            }
+        }
+    }
+}
+// General
+.__Navbar {
+    position: absolute;
+    padding: 0rem $content-outer-gap-desktop !important;
+    width: 100%;
+    z-index: 200;
+    .container {
+        padding: 0rem !important;
+        max-width: 100%;
+    }
+    .logoWrapper {
+        max-height: 20vh;
+        margin: 1rem 0rem;
+        transition: 300ms;
+        .logo {
+            width: 8rem;
+            transition: 300ms;
+        }
+    }
+    .navbar-links-left {
+        font-weight: 500 !important;
+        margin-left: 1rem;
+        font-style: normal;
+        font-size: 18px;
+        line-height: 22px;
+        .left {
+            margin: 0rem 0.5rem;
+        }
+        .left.dropdown {
+            button {
+                background-color: transparent !important;
+                outline: none;
+                border: none;
+                box-shadow: none;
+
+                &:hover,
+                &:focus {
+                    background-color: transparent !important;
+                    outline: none !important;
+                    border: none !important;
+                    box-shadow: none !important;
+                }
+            }
+            .dropdown-menu {
+                background: $navbar-primary;
+                box-shadow: 0px 4px 30px 10px rgba(0, 0, 0, 0.05);
+                border-radius: 10px;
+                .dropdown-item {
+                    color: rgba(111, 111, 111, 0.5);
+                    &:hover,
+                    &:focus {
+                        background: #f6f6f6 !important;
+                        color: #6f6f6f !important;
+                    }
+                }
+                .dropdown-item.active,
+                .dropdown-item:active {
+                    background: #f6f6f6 !important;
+                    color: #6f6f6f !important;
+                }
+            }
+        }
+    }
+
+    .navbar-links-right {
+        .right {
+            border: 2px solid $navbar-accent !important;
+            background-color: transparent !important;
+            color: $navbar-accent !important;
+            border-radius: 39px;
+            padding: 0.6rem 2rem;
+            transition: 0.5s;
+            &:hover,
+            &:focus {
+                border: 2px solid $navbar-accent !important;
+                background-color: $navbar-accent !important;
+                color: $navbar-primary !important;
+                transition: 0.5s;
+            }
+        }
+        .right.fill {
+            margin-left: 1rem;
+            border: 2px solid $navbar-accent !important;
+            background-color: $navbar-accent !important;
+            color: $navbar-primary !important;
+            transition: 0.5s;
+            &:hover,
+            &:focus {
+                border: 2px solid $navbar-accent !important;
+                background-color: transparent !important;
+                color: $navbar-accent !important;
+                transition: 0.5s;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        .__Navbar.light {
+            .navbar-toggler {
+                background-color: red !important;
+            }
+        }
+        .__Navbar.dark {
+            .navbar-toggler {
+                background-color: $navbar-primary !important;
+            }
+        }
+        .title {
+            font-size: 1.9rem !important;
+        }
+        .subtitle {
+            font-size: 1.2rem !important;
+        }
+        padding: 0 $content-outer-gap-mobile !important;
+        .logoWrapper {
+            max-height: 15vh;
+            transition: 300ms;
+            .logo {
+                width: 8rem;
+                transition: 300ms;
+            }
+        }
+        .logoWrapper.down {
+            .logo {
+                width: 4rem;
+            }
+        }
+    }
+}
